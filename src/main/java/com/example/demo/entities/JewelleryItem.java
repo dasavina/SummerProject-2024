@@ -3,8 +3,8 @@ package com.example.demo.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name= "jeweleryItems")
-public class JeweleryItem {
+@Table(name= "jewelleryItems")
+public class JewelleryItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType. IDENTITY)
@@ -18,7 +18,7 @@ public class JeweleryItem {
     @Column(name = "cost", nullable = false)
     private double cost;
 
-    public JeweleryItem(int id, String name, String type, String material, double cost) {
+    public JewelleryItem(int id, String name, String type, String material, double cost) {
         super();
         this.id = id;
         this.name = name;
