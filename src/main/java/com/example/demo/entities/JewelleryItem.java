@@ -18,6 +18,9 @@ public class JewelleryItem {
     @Column(name = "cost", nullable = false)
     private double cost;
 
+    public JewelleryItem() {
+    }
+
     public JewelleryItem(int id, String name, String type, String material, double cost) {
         super();
         this.id = id;
