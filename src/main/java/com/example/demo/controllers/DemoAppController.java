@@ -3,16 +3,18 @@ package com.example.demo.controllers;
 import com.example.demo.entities.JewelleryItem;
 import com.example.demo.implementations.JewelleryRepositoryService;
 import org.springframework.ui.Model;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@org.springframework.stereotype.Controller
-public class Controller {
+
+@Controller
+public class DemoAppController {
     private JewelleryRepositoryService service;
 
-    public Controller(JewelleryRepositoryService service) {
+    public DemoAppController(JewelleryRepositoryService service) {
         super();
         this.service = service;
     }
@@ -22,11 +24,13 @@ public class Controller {
         model.addAttribute("items", service.getItems());
         return "items";
     }
-    @GetMapping("/items/new")
+
+    @GetMapping("/items/add")
     public String createItemForm (Model model) {
 // create item object to hold item form data
         JewelleryItem item = new JewelleryItem();
-        model.addAttribute("item", item); return "create_item";
+        model.addAttribute("item", item);
+        return "add_item";
     }
     @PostMapping("/items")
     public String saveItem(@ModelAttribute("item") JewelleryItem item) { service.saveItem(item);
@@ -57,9 +61,9 @@ public class Controller {
         return "redirect:/items";
     }
 
-    @GetMapping("/students/{id}")
+    @GetMapping("/items/{id}")
     public String deleteItem(@PathVariable Integer id) {
         service.deleteItemById(id);
-        return "redirect:/students";
+        return "redirect:/items";
     }
 }

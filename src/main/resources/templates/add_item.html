@@ -2,17 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Jewellery items management system</title>
+    <title>Jewellery Items Management System</title>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJLSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
 </head>
 <body>
-
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Jewellery items management system</a>
+    <a class="navbar-brand" href="#">Jewellery Items Management System</a>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -23,7 +21,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/items}">Jewellery items management</a>
+                <a class="nav-link" th:href="@{/items}">Jewellery Items Management</a>
             </li>
         </ul>
     </div>
@@ -34,49 +32,45 @@
         <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
             <h1 class="text-center"> Create New Item </h1>
             <div class="card-body">
-                <form th:action="@{/items}" th: object="${item}" method="POST">
+                <form th:action="@{/items}" th:object="${item}" method="POST">
                     <div class="form-group">
-                        <label> Item name </label>
+                        <label>Item Name</label>
                         <input
                                 type="text"
                                 name="name"
-                                th:field="name"
+                                th:field="*{name}"
                                 placeholder="Enter Item Name"
                         />
-
                     </div>
                     <div class="form-group">
-                        <label> Item type </label>
+                        <label>Item Type</label>
                         <input
                                 type="text"
                                 name="type"
-                                th:field="type"
+                                th:field="*{type}"
                                 placeholder="Enter Item Type"
                         />
-
                     </div>
                     <div class="form-group">
-                        <label> Item material </label>
+                        <label>Item Material</label>
                         <input
                                 type="text"
                                 name="material"
-                                th:field="material"
+                                th:field="*{material}"
                                 placeholder="Enter Item Material"
                         />
-
                     </div>
                     <div class="form-group">
-                        <label> Item cost </label>
+                        <label>Item Cost</label>
                         <input
                                 type="number"
                                 name="cost"
-                                th:field="cost"
+                                th:field="*{cost}"
                                 placeholder="Enter Item Cost"
                         />
-
                     </div>
-                    <div class = "box-footer">
-                        <button type="submit" class = "btn btn-primary">
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">
                             Submit
                         </button>
                     </div>
@@ -86,3 +80,4 @@
     </div>
 </div>
 </body>
+</html>
