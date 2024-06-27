@@ -23,4 +23,13 @@ public class JewelleryRepositoryServiceImplementation implements JewelleryReposi
     public JewelleryItem saveItem(JewelleryItem item) {
         return repository.save(item);
     }
+    @Override
+    public JewelleryItem getItemById(Integer id) {
+        return repository.findById(id).get();
+    }
+
+    @Override
+    public JewelleryItem updateItem(JewelleryItem item) {
+        return repository.save(item);
+    }
 }

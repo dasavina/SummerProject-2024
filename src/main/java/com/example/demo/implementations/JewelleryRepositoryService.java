@@ -7,4 +7,6 @@ import java.util.List;
 public interface JewelleryRepositoryService {
     List<JewelleryItem> getItems();
     JewelleryItem saveItem(JewelleryItem item);
+    JewelleryItem getItemById(Integer id);
+    JewelleryItem updateItem(JewelleryItem item);
 }

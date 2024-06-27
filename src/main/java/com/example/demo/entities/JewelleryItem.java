@@ -54,11 +54,11 @@ public class JewelleryItem {
         this.type = type;
     }
 
-    public String getmaterial() {
+    public String getMaterial() {
         return material;
     }
 
-    public void setmaterial(String material) {
+    public void setMaterial(String material) {
         material = material;
     }
 
