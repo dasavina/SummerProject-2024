@@ -58,6 +58,14 @@
             <td th:text="${item.type}"></td>
             <td th:text="${item.material}"></td>
             <td th:text="${item.cost}"></td>
+            <td>
+                <a th:href = "@{/items/edit/{id}(id=${item.id})}"
+                   class = "btn btn-primary">Update</a>
+
+                <a th:href = "@{/items/{id}(id=${item.id})}"
+                   class = "btn btn-danger">Delete</a>
+
+            </td>
         </tr>
         </tbody>
     </table>

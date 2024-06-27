@@ -9,4 +9,5 @@ public interface JewelleryRepositoryService {
     JewelleryItem saveItem(JewelleryItem item);
     JewelleryItem getItemById(Integer id);
     JewelleryItem updateItem(JewelleryItem item);
+    void deleteItemById(Integer id);
 }

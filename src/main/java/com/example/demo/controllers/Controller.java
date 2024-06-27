@@ -56,4 +56,10 @@ public class Controller {
         service.updateItem(existingItem);
         return "redirect:/items";
     }
+
+    @GetMapping("/students/{id}")
+    public String deleteItem(@PathVariable Integer id) {
+        service.deleteItemById(id);
+        return "redirect:/students";
+    }
 }

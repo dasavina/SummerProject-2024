@@ -32,4 +32,9 @@ public class JewelleryRepositoryServiceImplementation implements JewelleryReposi
     public JewelleryItem updateItem(JewelleryItem item) {
         return repository.save(item);
     }
+
+    @Override
+    public void deleteItemById(Integer id) {
+        repository.deleteById(id);
+    }
 }

@@ -8,7 +8,7 @@ public class JewelleryItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType. IDENTITY)
-    private int id;
+    private Integer id;
     @Column(name = "name", nullable = false)
     private String name;
     @Column(name = "type")
@@ -59,7 +59,7 @@ public class JewelleryItem {
     }
 
     public void setMaterial(String material) {
-        material = material;
+        this.material = material;
     }
 
     public double getCost() {
