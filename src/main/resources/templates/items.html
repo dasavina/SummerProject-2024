@@ -36,6 +36,10 @@
     <div class="row">
         <h1> List of jewellery items </h1>
     </div>
+    <!-- Success message -->
+    <div th:if="${successMessage}" class="alert alert-success" role="alert">
+        <span th:text="${successMessage}"></span>
+    </div>
     <div class = "row">
         <div class= "col-Lg-3">
             <a th:href = "@{/items/add}" class="btn btn-primary btn-sm mb-3"> Add new item</a>
